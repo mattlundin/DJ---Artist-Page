@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: auto;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #b1b1b1;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 6rem;
+  height: 60px;
+  width: 100vw;
+  background-color: #222;
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.nav-list li a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: .8rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-list li a:hover {
+  outline: 1px solid #fff;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  padding-right: 1rem;
+  padding: 0;
+}
+
+.line1,
+.line2,
+.line3 {
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  border-radius: 25px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+
+/* END OF NAVBAR */
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(99, 99, 99);
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+/* Scrollbar */
+
+.main-container {
+  padding: 60px 0;
+}
+
+/* ===== HOME ===== */
+.home {
+  height: calc(100vh - 60px);
+  width: auto;
+}
+
+.header img {
+  width: 100%;
+  padding: 2% 10%;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 0 0;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 7rem;
+  text-shadow: 5px 5px 7px #fff;
+}
+/* ===== END OF HOME ===== */
+/* ===== LIFE ===== */
+.life-container {
+  height: 100%;
+  width: auto;
+  margin: 0 7rem 3rem 7rem;
+  padding-top: 60px;
+  background-color: #fff;
+  border: 15px groove rgb(48, 48, 48);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.intro img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50px;
+}
+
+.intro h2 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.early-life h3,
+.the-crash h3,
+.streets h3,               /*! Should have made new class */
+.purpose h3 {
+  margin: 0;
+  padding: 2rem 0 0 0;
+  font-size: 1.5rem;
+}
+
+/* IMAGE CONTAINERS */
+.image-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0 5%;  /*! PADDING 0 FOR RESPONSIVE */
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex: 0.5;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  margin: 5px;
+  border: 3px groove #585858;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h4 {
+  position: absolute;
+  font-size: 2rem;
+  padding: 2px;
+  margin: 0;
+  bottom: 25px;
+  left: 15px;
+  opacity: 0;
+  background-color: #fff;
+  border: 2px ridge rgb(133, 133, 133);
+  border-radius: 50px;
+  transition: opacity 0s ease-in 0s;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h4 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+/* END OF IMAGE CONTAINERS */
+.beginning {
+  padding-top: 5rem;
+
+}
+.beginning img {
+  height: 150px;
+  width: 150px;
+  /* animation: rotation 2s infinite linear; */ /*! Make image rotate */
+}
+/* @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+/* ===== END OF LIFE..... section ===== */
+
+/* ========== TOURS ========== */
+
+#tours {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.tour-container {
+  width: 500px;
+  padding: 0 30px;
+  background: #333333;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff;
+  border: 5px double #000000;
+  border-radius: 20px;
+}
+
+.tour-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-shadow: 3px 3px 6px #6d6d6d;
+}
+
+/* ========== END OF TOURS ========== */
+
+
+/* ========== SHOP ========== */
+
+.shop-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.shop {
+  margin-top: 10rem;
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.shop-container h1 {
+  font-size: 3rem;
+  text-shadow: 4px 4px 10px #6d6d6d;
+}
+
+/* ========== END OF SHOP ========== */
+
+/* ========== CONTACT ========== */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  margin-top: 5rem;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  text-shadow: 3px 3px 5px #6d6d6d;
+}
+
+.socials i {
+  font-size: 3rem;
+  margin: 0 2rem;
+  text-shadow: 3px 3px 5px #6d6d6d;
+  cursor: pointer;
+}
+
+/* ========== END OF CONTACT ========== */
+
+/* ==================== RESPONSIVE ==================== */
+
+@media screen and (max-width: 900px){
+  .navbar {
+    margin: 0;
+    padding: 0 2rem;
+  }
+  .header img {
+    padding: 0 5%;
+  }
+  .name {
+    font-size: 5rem;
+  }
+  .life-container {
+    margin: 0 4rem 3rem 4rem;
+  }
+  .image-container {
+    padding: 0;
+  }
+  .panel h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* NAVBAR */
+  .burger {
+    display: block;
+    user-select: none;
+  }
+  .navbar {
+    height: 40px;
+  }
+  .nav-list {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 40px);
+    width: 50vw;
+    top: 40px;
+    left: 0;
+    background-color: #222;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+
+  }
+  .nav-list li a {
+    height: 50%;
+    font-size: 1rem;
+  }
+  /* END OF NAVBAR */
+  .name {
+    padding-top: 3rem;
+    font-size: 3rem;
+  }
+  .life-container {
+    margin: .5rem;
+  }
+  .image-container {
+    margin: 0;
+    padding: 0;
+  }
+  .tour-container {
+    width: 100%;
+    margin: 0 10px;
+  }
+  .tour-header {
+    font-size: 2.5rem;
+  }
+}
+
+.nav-active {
+  transform: translate(0%);
+}
+
+/* BURGER ANIMATION */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* END OF BURGER ANIMATION */
+
+/* ==================== END OF RESPONSIVE ==================== */
